@@ -16,7 +16,7 @@ The goal is to:
 
 ---
 
-## 3. Quick-start
+## 2. Quick-start
 ```bash
 # 1 – clone repo & move into it
 git clone https://github.com/<your-handle>/Task_05_Descriptive_Stats.git
