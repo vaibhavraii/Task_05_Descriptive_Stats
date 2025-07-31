@@ -1,0 +1,119 @@
+# ✅ LLM Prompt Examples (4 Success + 4 Failure)
+
+Prompt:
+How many total goals did Syracuse score during the 2025 season?
+
+Input Data:
+| Team      | Total |
+|-----------|--------|
+| Syracuse  | 235    |
+| Opponents | 221    |
+
+Expected Answer:
+Syracuse scored a total of 235 goals in the 2025 season.
+
+Evaluation: ✅ Success – Value directly retrieved from goals_by_period.csv
+----------------------------------------
+
+Prompt:
+Which team had more total shots?
+
+Input Data:
+| Team      | Total |
+|-----------|--------|
+| Syracuse  | 538    |
+| Opponents | 552    |
+
+Expected Answer:
+Opponents had more total shots (552 vs 538).
+
+Evaluation: ✅ Success – Correct maximum identified from shots_by_period.csv
+----------------------------------------
+
+Prompt:
+How many saves did Syracuse make in the fourth quarter?
+
+Input Data:
+| Team      | 4th |
+|-----------|------|
+| Syracuse  | 39  |
+| Opponents | 39  |
+
+Expected Answer:
+Syracuse made 39 saves in the fourth quarter.
+
+Evaluation: ✅ Success – Exact cell from saves_by_period.csv
+----------------------------------------
+
+Prompt:
+Who scored the most goals?
+
+Input Data:
+| Player            | G  |
+|-------------------|----|
+| Meaghan Tyrrell   | 50 |
+| Emma Ward         | 43 |
+| Olivia Adamson    | 34 |
+
+Expected Answer:
+Meaghan Tyrrell with 50 goals.
+
+Evaluation: ✅ Success – Highest scorer correctly identified
+----------------------------------------
+
+Prompt:
+Who was the most improved player?
+
+Input Data:
+| Player            | G | A | Pts | GB |
+|-------------------|---|---|-----|----|
+| Multiple players  |   |   |     |    |
+
+Expected Answer:
+LLM may hallucinate – "improvement" not measurable in the data.
+
+Evaluation: ❌ Failure – No year-over-year stats or performance metric available
+----------------------------------------
+
+Prompt:
+What was the team’s shooting percentage during home games only?
+
+Input Data:
+| Statistic         | Syracuse |
+|-------------------|----------|
+| SHOTS             | 538      |
+| GOALS             | 235      |
+
+Expected Answer:
+LLM might attempt calculation, but home-specific SHOTS or GOALS not available.
+
+Evaluation: ❌ Failure – LLM lacks segment-specific stats
+----------------------------------------
+
+Prompt:
+Which player had the most game-winning goals?
+
+Input Data:
+| Player            | G  |
+|-------------------|----|
+| All players       |    |
+
+Expected Answer:
+LLM may fabricate stat – no column for "GWG" exists.
+
+Evaluation: ❌ Failure – Unsupported query
+----------------------------------------
+
+Prompt:
+How many yellow cards did Syracuse receive per quarter?
+
+Input Data:
+| Team      | Yellow Cards |
+|-----------|---------------|
+| Syracuse  | 22            |
+
+Expected Answer:
+LLM might distribute total across quarters or hallucinate details.
+
+Evaluation: ❌ Failure – No quarter-level breakdown exists for penalties
+----------------------------------------

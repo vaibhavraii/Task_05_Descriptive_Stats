@@ -1,0 +1,7 @@
+# never commit raw data
+data/*
+!data/.gitkeep
+# venv & IDE
+.venv/
+.vscode/
+__pycache__/
