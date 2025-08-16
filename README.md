@@ -39,3 +39,12 @@ python scripts/pdf_to_csv.py
 ls data/outputs/2025_su_tables_full/*.csv
 
 
+### 2025 Dataset — Period 2 Expansion
+
+Files added:
+- `prompts/expanded_prompts_2025.txt` — Expanded prompts from the 2025 dataset.
+- `prompt_refinement_2025.md` — Prompt refinement notes and examples for 2025.
+- `insights_2025.md` — Insights from 2025 dataset: successes, failures, prompting tips.
+- `ai_street_interview_2025.md` — AI street interview narration for 2025 dataset.
+
+This dataset follows the same structure and analysis process as the 2013 dataset.
